@@ -4,7 +4,7 @@
 package sef.module3.activity;
 
 /**
- * @author 
+ * @Kristofers Tauriņš
  *
  */
 public class NumToWordsUsingMethod {

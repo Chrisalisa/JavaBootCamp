@@ -1,8 +1,10 @@
 eclipse.preferences.version=1
 encoding//src/sef/module3/activity/AddWholeNum.java=UTF-8
+encoding//src/sef/module3/activity/FindInArray.java=UTF-8
 encoding//src/sef/module3/activity/FindLargest.java=UTF-8
 encoding//src/sef/module3/activity/MultiplicationTable.java=UTF-8
 encoding//src/sef/module3/activity/NumToWords.java=UTF-8
+encoding//src/sef/module3/activity/NumToWordsUsingMethod.java=UTF-8
 encoding//src/sef/module3/activity/OperatorActivity.java=UTF-8
 encoding//src/sef/module3/activity/PrintNumWithWhile.java=UTF-8
 encoding//src/sef/module3/activity/VariableAssignmentActivity.java=UTF-8
