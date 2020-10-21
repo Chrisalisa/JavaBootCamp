@@ -1,7 +1,7 @@
 package sef.module4.activity;
 
 /**
- * @author
+ * @Kristofers Tauriņš
  *
  */
 public class CalculatorClient {
@@ -27,7 +27,8 @@ public class CalculatorClient {
 		int[] mul = {2, 3, 4};
 		result = normalCalc.multiply(mul);
 		System.out.println("2) Multiplication result is " + result); 
-		
+		System.out.println(normalCalc.divide(6, 3));
+		System.out.println(normalCalc.subtract(59, 31));
 
 	}
 
