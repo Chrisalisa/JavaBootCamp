@@ -4,7 +4,7 @@
 package sef.module3.activity;
 
 /**
- * @author
+ * @Kristofers Tauriņš
  *
  */
 public class FindLargest {
@@ -26,26 +26,32 @@ public class FindLargest {
 
 		// Find Largest of three numbers
 				
-		int i = 1, j = 2, k = 10;
+		int i = 15, j = 12, k = 9;
 		
 		if (i > j) {
-			if // complete code
+			if (i>k) // complete code
 			{
 				System.out.println(i + " is Largest of three numbers");
-			} else {
+			} 
+			else {
 				System.out.println(k+ " is Largest of three numbers");
 			}
-		} else {
-			if // complete code
+	
+		}else {
+			if (j>k)// complete code
 			{
 				System.out.println(j+ " is Largest of three numbers");
-			} else {
+			} 
+			else {
 				System.out.println(k+ " is Largest of three numbers");
-			}
+				}
 		}
-		
-
-
-	}
-
+			
+		}
 }
+		
+			
+		
+		
+		
+	

@@ -4,7 +4,7 @@
 package sef.module3.activity;
 
 /**
- * @author 
+ * @Kristofers Tauriņš 
  *
  */
 public class PrintNumWithWhile {
@@ -14,6 +14,11 @@ public class PrintNumWithWhile {
 	 */
 	public static void main(String[] args) {
 		
+		int counter =0;
+		while (counter<100) {
+			System.out.println(counter);
+			counter=counter+2;
+		}
 		
 		// Print all even numbers less than 100
 //		int i = 0;
@@ -24,7 +29,7 @@ public class PrintNumWithWhile {
 //		
 		 
 		// write code to Print all odd numbers less than 100
-		int j = 100;
+		int j = 1;
 		while(j < 100) {
 			System.out.println(j);
 			j = j +2;
