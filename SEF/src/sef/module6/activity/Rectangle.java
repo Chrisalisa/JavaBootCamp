@@ -4,7 +4,7 @@ public class Rectangle extends Shape{
 	private double length;
 	private double width;
 
-	public Rectangle() {
+	Rectangle() {
 		this.length=0;
 		this.width=0;
 	}
@@ -14,12 +14,12 @@ public class Rectangle extends Shape{
 	}
 	
 	public double calculateArea() {
-		return this.length*this.width;
+		return length*width;
 	}
 
 	
 	public double calculatePerimeter() {
-		return 2*(this.length+this.width);
+		return 2*(length+width);
 	}
 }
 
