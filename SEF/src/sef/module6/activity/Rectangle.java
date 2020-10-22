@@ -4,18 +4,22 @@ public class Rectangle extends Shape{
 	private double length;
 	private double width;
 
+	public Rectangle() {
+		this.length=0;
+		this.width=0;
+	}
+	public Rectangle(double x, double y) {
+		this.length=x;
+		this.width=y;
+	}
 	
-
-	@Override
 	public double calculateArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.length*this.width;
 	}
 
-	@Override
+	
 	public double calculatePerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 2*(this.length+this.width);
 	}
-
 }
+
