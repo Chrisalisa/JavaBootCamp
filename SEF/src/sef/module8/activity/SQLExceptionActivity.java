@@ -37,7 +37,7 @@ public class SQLExceptionActivity {
 			}
 			
 			
-			//2 - You also need to catch SQLException for it to compile
+			System.out.println("Aaaaaa");//2 - You also need to catch SQLException for it to compile
 			
 	
 	}
