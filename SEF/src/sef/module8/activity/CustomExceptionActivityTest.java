@@ -35,7 +35,7 @@ for(int i=0;i<4;i++)
 }
 //3 - check if flag is zero, throw CustomExceptionActivity Exception.
 //You may also have to declare this exception in the method call using throws.
-if(flag==0) 	throw new CustomExceptionActivity ();
+if(flag==0) 	throw new CustomExceptionActivity  ();
 
 else System.out.println("Welcome to Payroll program");
 //4 - else if flag is one, print a message "Welcome to Payroll program". 

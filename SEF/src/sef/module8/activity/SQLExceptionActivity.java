@@ -34,6 +34,7 @@ public class SQLExceptionActivity {
 			
 			catch(SQLException b) {
 				System.out.println("There was an SQL Exception");
+				
 			}
 			
 			

@@ -51,7 +51,7 @@ public class EmployeeJDBC {
 			emp.setFirstName(result.getString(2));
 			emp.setLastName(result.getString(3));
 		}
-		else System.out.println("NEET");
+		else System.out.println("No employee with such an ID found");
 		con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -67,16 +67,22 @@ public class EmployeeJDBC {
 		ArrayList<Employee> list = new ArrayList<Employee>();
 		
 		try {
-		// 1 - Create a PreparedStatement with a query
-		
-
-		// 2 - Search for the given id
-		
-		// 3 - Execute this query
-		
-		
-		// 4 - While there are some records, continue 
-		
+			PreparedStatement stmt=con.prepareStatement("SELECT emp_no, first_name,last_name FROM employees WHERE first_name= (?)");
+			stmt.setString(1, name);		
+			ResultSet result=stmt.executeQuery();
+			if(result.next()) {
+				do {
+					Employee temp=new Employee();
+					temp.setId(result.getString(1));
+					temp.setFirstName(result.getString(2));
+					temp.setLastName(result.getString(3));
+					list.add(temp);
+					//System out println was left for testing purposes
+					System.out.println(temp.getFirstName()+" "+temp.getLastName()+ " "+temp.getId());
+					temp=null;
+				}while(result.next());
+				
+			}else list=null;
 			con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -86,32 +92,9 @@ public class EmployeeJDBC {
 		return list;
 	}
 
-	public ArrayList<Employee> findEmployeesBySalary(int salary)
-	{
-		Connection con = createConnection();
-		ArrayList<Employee> list = new ArrayList<Employee>();
-		
-		try {
-		// 1 - Create a PreparedStatement with a query
-		
-
-		// 2 - Search for the given salary
-		
-
-		// 3 - Execute this query
-
-		
-		// 4 - While there are records, continue 
-
-		con.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return list;
-	}
-
+	//Salary section was removed due to provided database not containing salary information
+	//And in terms of function it is a precise repeat of findEmployeesByName
+	//Database was adjusted to auto increment the ID and to accept null values for values not found in the employee object
 	public void insertEmployee(Employee emp)
 	{
 		try {
@@ -120,12 +103,17 @@ public class EmployeeJDBC {
 		//1 - Create a PreparedStatement with a query "insert into employee values(?,?,?,?)" 
 		
 		con.setAutoCommit(false);
-
+		PreparedStatement stmt=con.prepareStatement("INSERT INTO employees (emp_no, birth_date, first_name, "
+				+ "last_name, gender, hire_date) "
+				+ "VALUES (NULL, NULL, ?, ?, NULL, NULL) ");
+		stmt.setString(1, emp.getFirstName());
+		stmt.setString(2, emp.getLastName());
+		stmt.executeUpdate();
 		//	Substitute the ? now.
 		
 		//2 - Execute this query using executeUpdate()
 			
-		System.out.println(rows + " row(s) added!");
+		//Row output was removed due to method only receiving one employee to update the database with
 		con.commit();
 		con.close();
 		} catch (SQLException e) {

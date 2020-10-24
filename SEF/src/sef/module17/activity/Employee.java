@@ -3,7 +3,6 @@ package sef.module17.activity;
 class Employee {
 
 	String id;
-	String birthDate;
 	String firstName;
 	String lastName;
 	
@@ -25,12 +24,7 @@ class Employee {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public int getSalary() {
-		return salary;
-	}
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
+
 	
 	
 }

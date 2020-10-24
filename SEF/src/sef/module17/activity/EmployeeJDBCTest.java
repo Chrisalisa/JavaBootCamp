@@ -21,33 +21,39 @@ public class EmployeeJDBCTest extends TestCase {
 	}
 
 	public void testFindEmployeeById_MatchFound() {
-		emp.findEmployeeById("10001");
-		assertNotNull(emp);
+		Employee sentboi=new Employee();
+		sentboi=emp.findEmployeeById("10001");
+		assertNotNull(sentboi);
 	}
 
 	public void testFindEmployeeById_NoMatchFound() {
 		//complete the code here
+		Employee sentboi=new Employee();
+		sentboi=emp.findEmployeeById("1000");
+		assertNull(sentboi);
 	}
 	
 	
 	public void testFindEmployeeByName_MatchFound() {
-		//complete the code here
+		ArrayList<Employee> saraksts=new ArrayList<Employee>();
+		saraksts=emp.findEmployeesByName("lols");
+		assertNotNull(saraksts);
 	}
 	
 	public void testFindEmployeeByName_NoMatchFound() {
-		//complete the code here
+		ArrayList<Employee> saraksts=new ArrayList<Employee>();
+		saraksts=emp.findEmployeesByName("Dougasdasda");
+		assertNull(saraksts);
 	}
 
-	public void testFindEmployeeBySalary_MatchFound() {
-		//complete the code here
-	}
 
-	public void testFindEmployeeBySalary_NoMatchFound() {
-		//complete the code here
-	}
 	
 	public void testInsertEmployee(){
 		//complete the code here
-		
+		Employee test=new Employee();
+		test.setFirstName("lols");
+		test.setLastName("trollis");
+		emp.insertEmployee(test);
+		assert(emp.findEmployeesByName("lols")!=null);
 	}
 }
