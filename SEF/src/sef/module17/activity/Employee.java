@@ -3,9 +3,10 @@ package sef.module17.activity;
 class Employee {
 
 	String id;
+	String birthDate;
 	String firstName;
 	String lastName;
-	int salary;
+	
 	public String getId() {
 		return id;
 	}

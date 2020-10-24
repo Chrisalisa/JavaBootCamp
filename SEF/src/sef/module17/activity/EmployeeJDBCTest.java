@@ -21,7 +21,8 @@ public class EmployeeJDBCTest extends TestCase {
 	}
 
 	public void testFindEmployeeById_MatchFound() {
-		//complete the code here
+		emp.findEmployeeById("10001");
+		assertNotNull(emp);
 	}
 
 	public void testFindEmployeeById_NoMatchFound() {
