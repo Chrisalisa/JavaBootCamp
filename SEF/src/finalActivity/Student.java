@@ -15,9 +15,8 @@ public class Student extends Person{
 	public void setSchoolName(String schoolName) {
 		this.schoolName = schoolName;
 	}
-	public void personalIntro() {
-		super.personalIntro();
-		System.out.println("And i study in "+schoolName);
+	public String personalIntro() {
+		return super.personalIntro()+" And i study in "+schoolName;
 	}
 
 }

@@ -16,7 +16,7 @@ public class FirstActivity {
 	list.add(e4);
 	Collections.sort(list);
 	for(Employee lister: list) {
-		lister.personalIntro();
+		System.out.println(lister.personalIntro());
 	}
  }
 }

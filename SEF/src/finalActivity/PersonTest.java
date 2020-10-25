@@ -9,20 +9,12 @@ public class PersonTest {
 	@Test
 	public void testName() {
 		Person testP=new Person();
-		testP.setName("Jacob");
-		assert(testP.getName()=="Jacob");
+		testP.setName("Jacob3");
+		testP.setAge(23);
+		System.out.println(testP.personalIntro());
+		assert(String.valueOf(testP.personalIntro())=="My name is Jacob and i am 23 years old!");
+		//Honestly no idea why the test shows as a failure. would love an explanation
 	}
-	@Test
-	public void testAge() {
-		Person testP=new Person();
-		testP.setAge(21);
-		assert(testP.getAge()==21);
-	}
-	@Test
-	public void testParameterConstructor() {
-		Person testP=new Person("Layla", 43);
-		assert((testP.getAge()==43)&&(testP.getName()=="Layla"));
-		
-	}
+	
 
 }

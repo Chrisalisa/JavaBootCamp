@@ -31,9 +31,8 @@ public class Employee extends Person implements Comparable<Employee>{
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public void personalIntro() {
-		super.personalIntro();
-		System.out.println("And i work as a "+jobTitle+" in "+company+" and i earn "+salary);
+	public String personalIntro() {
+		return super.personalIntro()+" And i work as a "+jobTitle+" in "+company+" and i earn "+salary;
 	}
 	public int compareTo(Employee employee) {
 		return this.salary-employee.salary;
